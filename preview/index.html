@@ -74,20 +74,40 @@ SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
     </div>
   </div>
 
-  <!-- From examples/hello_world.carbon in carbon-language/carbon-lang. -->
-  <div class="code-panel" translate="no">
-    <div class="code-topbar">
-      <span class="code-dot code-dot-red"></span>
-      <span class="code-dot code-dot-amber"></span>
-      <span class="code-dot code-dot-green"></span>
-      <span class="code-filename">hello_world.carbon</span>
+  <!-- Compiled, linked, and run with the Carbon nightly toolchain. The Carbon
+       file extends examples/hello_world.carbon from carbon-language/carbon-lang. -->
+  <div class="code-stack">
+    <div class="code-panel" translate="no">
+      <div class="code-topbar">
+        <span class="code-dot code-dot-red"></span>
+        <span class="code-dot code-dot-amber"></span>
+        <span class="code-dot code-dot-green"></span>
+        <span class="code-filename">hello_world.carbon</span>
+      </div>
+      <div class="code-body" tabindex="0" role="region" aria-label="Carbon code sample">
+        <div><span class="code-ln" aria-hidden="true">1</span><span class="kw">import</span> Core <span class="kw">library</span> <span class="str">"io"</span>;</div>
+        <div><span class="code-ln" aria-hidden="true">2</span><span class="kw">import</span> Cpp <span class="kw">library</span> <span class="str">"hello_world.h"</span>;</div>
+        <div><span class="code-ln" aria-hidden="true">3</span></div>
+        <div><span class="code-ln" aria-hidden="true">4</span><span class="kw">fn</span> <span class="fn">Run</span>() {</div>
+        <div><span class="code-ln" aria-hidden="true">5</span><span class="code-indent">Core.PrintStr(<span class="str">"Hello world!\n"</span>);</span></div>
+        <div><span class="code-ln" aria-hidden="true">6</span><span class="code-indent">Cpp.<span class="fn">HelloWorld</span>();</span></div>
+        <div><span class="code-ln" aria-hidden="true">7</span>}</div>
+      </div>
     </div>
-    <div class="code-body" tabindex="0" role="region" aria-label="Code sample">
-      <div><span class="code-ln" aria-hidden="true">1</span><span class="kw">import</span> Core <span class="kw">library</span> <span class="str">"io"</span>;</div>
-      <div><span class="code-ln" aria-hidden="true">2</span></div>
-      <div><span class="code-ln" aria-hidden="true">3</span><span class="kw">fn</span> <span class="fn">Run</span>() {</div>
-      <div><span class="code-ln" aria-hidden="true">4</span><span class="code-indent">Core.PrintStr(<span class="str">"Hello world!\n"</span>);</span></div>
-      <div><span class="code-ln" aria-hidden="true">5</span>}</div>
+    <div class="code-panel" translate="no">
+      <div class="code-topbar">
+        <span class="code-dot code-dot-red"></span>
+        <span class="code-dot code-dot-amber"></span>
+        <span class="code-dot code-dot-green"></span>
+        <span class="code-filename">hello_world.h</span>
+      </div>
+      <div class="code-body" tabindex="0" role="region" aria-label="C++ header imported by the Carbon code">
+        <div><span class="code-ln" aria-hidden="true">1</span><span class="kw">#include</span> <span class="str">&lt;iostream&gt;</span></div>
+        <div><span class="code-ln" aria-hidden="true">2</span></div>
+        <div><span class="code-ln" aria-hidden="true">3</span><span class="kw">inline auto</span> <span class="fn">HelloWorld</span>() -&gt; <span class="kw">void</span> {</div>
+        <div><span class="code-ln" aria-hidden="true">4</span><span class="code-indent">std::cout &lt;&lt; <span class="str">"Hello from C++!\n"</span>;</span></div>
+        <div><span class="code-ln" aria-hidden="true">5</span>}</div>
+      </div>
     </div>
   </div>
 </div>

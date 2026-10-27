@@ -300,6 +300,12 @@ nav {
 }
 
 /* CODE PANEL */
+.code-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .code-panel {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -346,6 +352,7 @@ nav {
   font-family: var(--font-mono);
   font-size: 13px;
   line-height: 1.85;
+  overflow-x: auto;
 }
 
 .code-body > div {
@@ -761,7 +768,6 @@ footer {
   .code-body {
     padding: 16px;
     font-size: 12px;
-    overflow-x: auto;
   }
   .section-wrap {
     padding: 48px 16px;
